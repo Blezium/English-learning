@@ -1,13 +1,222 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+li {
+  list-style: none;
+}
+.App {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.content {
+  min-height: 88vh;
+  background-color: rgb(184, 153, 111);
+  padding: 40px 30px;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 26px;
+  background-color:rgb(245, 226, 200);
+}
+.links {
+  display: flex;
+  gap: 20px;
+}
+.links li a {
+  font-size: 20px;
+  color: rgb(207, 138, 9);
+  text-decoration: none;
+}
+.links li a:hover {
+  color: rgb(250, 164, 6);
+}
+.vocabulary {
+  position: relative;
+  background-color: rgb(139, 109, 66);
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+.vocabulary-upper {
+  height: 42px;
+  padding: 10px;
+}
+.vocabulary-upper .change-mode {
+  position: absolute;
+  right: 10px;
+  height: 20px;
+  border: 1px solid black;
+  background-color: rgb(97, 72, 26);
+  user-select: none;
+  cursor: pointer;
+}
+.vocabulary-upper .change-mode:hover {
+  background-color: rgb(133, 103, 52);
+  border-radius: 6px;
+}
+input.search-word {
+  background-color: rgb(202, 198, 134);
+  border: 1px solid rgb(20, 20, 20);
+}
+input.search-word:focus {
+  outline: none;
+  background-color: rgb(230, 225, 162);
+}
+.vocabulary-lower {
+  padding: 5px;
+  border-top: rgb(109, 79, 37) 2px solid;
+}
+.words {
+  display: flex;
+  flex-direction: column;
+  height: 355px;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+.words li {
+  font-size: 22px;
+  border-top: 1px solid rgb(139, 109, 66);
+  border-bottom: 1px solid rgb(139, 109, 66);
+}
+.words li:hover {
+  border-top: 1px solid rgb(43, 31, 14);
+  border-bottom: 1px solid rgb(43, 31, 14);
+}
+.words li .word {
+  font-weight: 900;
+  color:rgb(22, 16, 2);
+  margin-right: 10px;
+}
+.word-container {
+  position: relative;
+}
+.button-delete {
+  position: absolute;
+  top: 3%;
+  height: 94%;
+  width: 50px;
+  right: 5px;
+  border: 1px solid black;
+  background-color: rgb(97, 72, 26);
+  transition: all .2s ease-in-out;
+  user-select: none;
+  cursor: pointer;
+}
+.button-delete:hover {
+  width: 60px;
+  background-color: rgb(116, 88, 41);
+  border-radius: 6px;
+}
+.adding-container {
+  font-size: 22px;
+}
+.adding-container input {
+  border: 1px solid black;
+  background-color: rgb(183, 197, 105);
+}
+.adding-container input:focus {
+  background-color: rgb(197, 209, 126);
+  outline: none;
+}
+.adding-form .submit {
+  height: 30px;
+  width: 175px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.adding-form .submit:hover {
+  background-color: rgb(144, 156, 74);
+}
+.loading {
+  width: 80px;
+  display: flex;
+  gap: 10px;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+.loading-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: white;
+}
+.error {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(146, 5, 5);
+  font-size: 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.tests {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 480px;
+  min-height: 100px;
+  padding: 10px 0;
+  margin: 0 auto;
+  background-color: rgb(139, 109, 66);
+}
+.test-link {
+  border-radius: 3px;
+  font-size: 20px;
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgba(255, 255, 255, 0.041);
+  text-align: center;
+  text-decoration: none;
+}
+.test-link:hover {
+  background-color: rgba(255, 255, 255, 0.226);
+}
+
+.test-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 300px;
+  height: 320px;
+  padding: 10px 0;
+  margin: 0 auto;
+  background-color: rgb(139, 109, 66);
+}
+.asked-word {
+  font-size: 30px;
+  font-weight: bold;
+  color:rgb(10, 10, 10);
+}
+input.answer {
+  font-size: 18px;
+  width: 200px;
+  height: 25px;
+  background-color: rgb(202, 198, 134);
+  border: 1px solid black;
+}
+input.answer:focus {
+  background-color: rgb(231, 229, 182);
+  outline: none;
+}
+.message {
+  font-size: 22px;
+  font-weight: bold;
+}
+.message.green {
+  color: rgb(36, 199, 36);
+  background-color: rgba(97, 226, 97, 0.068);
+}
+.message.red {
+  color: rgb(173, 20, 20);
+  background-color: rgba(173, 20, 20, 0.034);
 }
