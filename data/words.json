@@ -1,14 +1,34 @@
 {
   "words": [
     {
-      "word": "mouse",
-      "translation": "мышь",
-      "id": 1
+      "word": "bond",
+      "translation": "звязок",
+      "id": 3
     },
     {
-      "word": "word",
-      "translation": "слово",
-      "id": 2
+      "word": "willingly",
+      "translation": "охоче",
+      "id": 4
+    },
+    {
+      "word": "to gauge",
+      "translation": "оцінювати",
+      "id": 5
+    },
+    {
+      "word": "perceive",
+      "translation": "сприймати",
+      "id": 6
+    },
+    {
+      "word": "realise",
+      "translation": "усвідомити",
+      "id": 7
+    },
+    {
+      "word": "aware",
+      "translation": "обізнаний",
+      "id": 8
     }
   ]
 }

@@ -5,10 +5,10 @@ const AddWord = () => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        
+
         const wordInput = e.target.querySelector('#word');
         const translationInput = e.target.querySelector('#translation');
-        
+
         if (wordInput.value.trim().length > 15 || wordInput.value.trim().length <= 2) {
             setReport('The word is too long or too short');
             return;
@@ -17,9 +17,9 @@ const AddWord = () => {
             setReport('The translation is too long or too short');
             return;
         }
-        
-        
-        const finalObject = {word: wordInput.value.trim().toLowerCase(), translation: translationInput.value.trim().toLowerCase()};
+
+
+        const finalObject = { word: wordInput.value.trim().toLowerCase(), translation: translationInput.value.trim().toLowerCase() };
         wordInput.value = '';
         translationInput.value = '';
 
@@ -31,8 +31,9 @@ const AddWord = () => {
             .then(() => {
                 setReport('Successfully added')
             })
+            .catch(err => setReport('Could not send the data'))
 
-        console.log( wordInput, translationInput )
+        console.log(wordInput, translationInput)
     }
 
     return (
@@ -45,9 +46,9 @@ const AddWord = () => {
                 <label htmlFor="translation">Translation:</label>
                 <br />
                 <input id="translation" autoComplete="off" type="text" />
-                <br/>
-                <input className="submit" type="submit" value="submit"/>
-                <div className="report">{ report }</div>
+                <br />
+                <input className="submit" type="submit" value="submit" />
+                <div className="report">{report}</div>
             </form>
         </div>
     );

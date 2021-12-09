@@ -24,7 +24,7 @@ const Test = () => {
             setMessage('You are right');
             chooseRandElem(words);
         } else {
-            setMessage(`You are wrong (${currentWord.translation})`)
+            setMessage(`(${currentWord.word} - ${currentWord.translation})`)
             chooseRandElem(words);
         }
         input.value = '';
