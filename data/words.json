@@ -1,34 +1,29 @@
 {
   "words": [
     {
-      "word": "bond",
-      "translation": "звязок",
-      "id": 3
+      "word": "expand",
+      "translation": "расширять",
+      "id": 1
     },
     {
-      "word": "willingly",
-      "translation": "охоче",
+      "word": "expect",
+      "translation": "ожидать",
+      "id": 2
+    },
+    {
+      "word": "mention",
+      "translation": "упомянуть",
       "id": 4
     },
     {
-      "word": "to gauge",
-      "translation": "оцінювати",
+      "word": "wonder",
+      "translation": "удивляться",
       "id": 5
     },
     {
-      "word": "perceive",
-      "translation": "сприймати",
+      "word": "perform",
+      "translation": "выполнять",
       "id": 6
-    },
-    {
-      "word": "realise",
-      "translation": "усвідомити",
-      "id": 7
-    },
-    {
-      "word": "aware",
-      "translation": "обізнаний",
-      "id": 8
     }
   ]
 }
